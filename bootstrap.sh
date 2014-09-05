@@ -138,12 +138,12 @@ create_symlinks() {
     lnif "$endpath/.vim"                "$HOME/.vim"
 
     # Useful for fork maintainers
-    touch  "$HOME/.vimrc.local"
+    #touch  "$HOME/.vimrc.local"
+    if [ -e "$endpath/.vimrc.local" ]; then
+        ln -sf "$endpath/.vimrc.local" "$HOME/.vimrc.local"
 
     if [ -e "$endpath/.vimrc.fork" ]; then
         ln -sf "$endpath/.vimrc.fork" "$HOME/.vimrc.fork"
-    elif [ -e "$endpath/.vimrc.before.fork" ]; then
-        ln -sf "$endpath/.vimrc.before.fork" "$HOME/.vimrc.before.fork"
     elif [ "$fork_maintainer" -eq '1' ]; then
         touch "$HOME/.vimrc.fork"
         touch "$HOME/.vimrc.bundles.fork"
