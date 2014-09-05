@@ -141,6 +141,7 @@ create_symlinks() {
     #touch  "$HOME/.vimrc.local"
     if [ -e "$endpath/.vimrc.local" ]; then
         ln -sf "$endpath/.vimrc.local" "$HOME/.vimrc.local"
+    fi
 
     if [ -e "$endpath/.vimrc.fork" ]; then
         ln -sf "$endpath/.vimrc.fork" "$HOME/.vimrc.fork"
