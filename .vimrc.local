@@ -1,1 +1,5 @@
+" local settings {
 let mapleader = ","
+set fileencodings=utf-8,ucs-bom,chinese,taiwan,japan,korea,latin1
+
+" }
