@@ -143,6 +143,10 @@ create_symlinks() {
         ln -sf "$endpath/.vimrc.local" "$HOME/.vimrc.local"
     fi
 
+    if [ -e "$endpath/.vimrc.before.local" ]; then
+        ln -sf "$endpath/.vimrc.before.local" "$HOME/.vimrc.before.local"
+    fi
+
     if [ -e "$endpath/.vimrc.fork" ]; then
         ln -sf "$endpath/.vimrc.fork" "$HOME/.vimrc.fork"
     elif [ "$fork_maintainer" -eq '1' ]; then

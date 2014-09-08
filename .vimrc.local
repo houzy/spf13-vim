@@ -1,14 +1,23 @@
 " local settings {
 let mapleader = ","
 
+set wrap
+set nospell
+
 set encoding=utf-8
 set termencoding=utf-8
 set fileencoding=utf-8
 set fileencodings=utf-8,ucs-bom,chinese,taiwan,japan,korea,latin1
 set fileformat=unix
 
-"colorscheme ir_black
-colorscheme ron
+colorscheme ir_black
+"colorscheme ron
+
+" SnipMate
+let g:snips_author = 'houzy <h-zy2008@hotmail.com>'
+let g:snip_author  = "houzy"
+let g:snip_mail    = "h-zy2008@hotmail.com"
+let g:snip_company = ""
 
 " syntastic
 let g:syntastic_check_on_open = 1
