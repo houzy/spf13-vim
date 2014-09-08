@@ -11,7 +11,18 @@ set fileencodings=utf-8,ucs-bom,chinese,taiwan,japan,korea,latin1
 set fileformat=unix
 
 colorscheme ir_black
+"colorscheme molokai
+"colorscheme peaksea
 "colorscheme ron
+
+UnBundle 'amirh/HTML-AutoCloseTag'
+
+" python-syntax
+let OPTION_NAME = 1
+let python_highlight_all = 1
+
+" ctrl+c default function: leave insert mode, similar to esc
+vmap <C-C> "+y
 
 " SnipMate
 let g:snips_author = 'houzy <h-zy2008@hotmail.com>'

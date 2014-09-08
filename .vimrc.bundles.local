@@ -1,0 +1,4 @@
+Bundle 'hdima/python-syntax'
+Bundle 'sukima/xmledit'
+Bundle 'Yggdroot/indentLine'
+Bundle 'luochen1990/rainbow'
