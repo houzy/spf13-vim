@@ -4,6 +4,18 @@ let mapleader = ","
 set wrap
 set nospell
 
+set clipboard&                      "Reset option to its default value.  May depend on the
+
+set autowrite                       " auto save before commands like :next and :make
+set hidden                          " enable multiple modified buffers
+set history=100                     " record recent used command history
+set autoread                        " auto read file that has been changed on disk
+set autoindent                      " automatically indent new line
+set tabstop=4                       " number of spaces in a tab
+set softtabstop=4                   " insert and delete space of <tab>
+set shiftwidth=4                    " number of spaces for indent
+set expandtab                       " expand tabs into spaces
+
 set encoding=utf-8
 set termencoding=utf-8
 set fileencoding=utf-8
