@@ -10,7 +10,7 @@ set fileformat=unix
 set wrap
 
 " set nospell
-autocmd VimEnter,BufWinEnter * set nospell
+autocmd VimEnter,BufWinEnter,BufNewFile,BufRead,BufEnter,TabEnter * set nospell
 autocmd VimEnter,BufWinEnter * set iskeyword-=.
 autocmd VimEnter,BufWinEnter * set iskeyword-=#
 autocmd VimEnter,BufWinEnter * set iskeyword+=_
@@ -29,6 +29,12 @@ UnBundle 'amirh/HTML-AutoCloseTag'
 " remove coloresque because it is causing problems with iskeyword 
 " (periods are not separating keywords)
 "UnBundle 'gorodinskiy/vim-coloresque'
+
+" in Vim files (including .vimrc), you may not want pairing of "
+" because it is the comment character. If you set a value for
+" g:autoclose_vim_commentmode, the " character will not be paired
+" if Vim considers the current buffer to be a Vim file.
+let g:autoclose_vim_commentmode = 1
 
 " Haskellmode-vim
 let g:haddock_browser="/usr/bin/firefox"
