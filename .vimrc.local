@@ -20,10 +20,10 @@ set clipboard&                      " Reset option to its default value.
 set autowrite                       " auto save before commands like :next and :make
 set autoread                        " auto read file that has been changed on disk
 
-colorscheme ir_black
+"colorscheme ir_black
 "colorscheme molokai
 "colorscheme peaksea
-"colorscheme ron
+colorscheme ron
 
 UnBundle 'amirh/HTML-AutoCloseTag'
 " remove coloresque because it is causing problems with iskeyword 
@@ -35,6 +35,9 @@ UnBundle 'amirh/HTML-AutoCloseTag'
 " g:autoclose_vim_commentmode, the " character will not be paired
 " if Vim considers the current buffer to be a Vim file.
 let g:autoclose_vim_commentmode = 1
+
+" emmet-vim To remap the default <C-Y> leader
+let g:user_emmet_leader_key='<C-Z>'
 
 " Haskellmode-vim
 let g:haddock_browser="/usr/bin/firefox"

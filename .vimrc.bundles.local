@@ -1,4 +1,5 @@
 Bundle 'hdima/python-syntax'
-Bundle 'sukima/xmledit'
-Bundle 'Yggdroot/indentLine'
+"Bundle 'sukima/xmledit'
+"Bundle 'Yggdroot/indentLine'
 Bundle 'luochen1990/rainbow'
+Bundle 'mattn/emmet-vim'
