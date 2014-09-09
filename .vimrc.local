@@ -18,9 +18,11 @@ autocmd VimEnter,BufWinEnter * set iskeyword+=_
 set clipboard&                      " Reset option to its default value.
 " set virtualedit=onemore in .vimrc " Allow for cursor beyond last character
 set virtualedit&                    " Reset option to its default value.
-" set whichwrap=b,s,h,l,<,>,[,] in .vimrc " Backspace and cursor keys wrap too
+" set whichwrap=b,s,h,l,<,>,[,] in .vimrc
 set whichwrap-=h
 set whichwrap-=l
+" set t_Co=256                      " Enable 256 colors to stop the CSApprox warning and make xterm vim shine
+set t_Co&
 
 set autowrite                       " auto save before commands like :next and :make
 set autoread                        " auto read file that has been changed on disk
