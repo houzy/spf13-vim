@@ -1,26 +1,24 @@
 " local settings {
 let mapleader = ","
 
-set wrap
-set nospell
-
-set clipboard&                      "Reset option to its default value.  May depend on the
-
-set autowrite                       " auto save before commands like :next and :make
-set hidden                          " enable multiple modified buffers
-set history=100                     " record recent used command history
-set autoread                        " auto read file that has been changed on disk
-set autoindent                      " automatically indent new line
-set tabstop=4                       " number of spaces in a tab
-set softtabstop=4                   " insert and delete space of <tab>
-set shiftwidth=4                    " number of spaces for indent
-set expandtab                       " expand tabs into spaces
-
 set encoding=utf-8
 set termencoding=utf-8
 set fileencoding=utf-8
 set fileencodings=utf-8,ucs-bom,chinese,taiwan,japan,korea,latin1
 set fileformat=unix
+
+set wrap
+
+" set nospell
+autocmd VimEnter,BufWinEnter * set nospell
+autocmd VimEnter,BufWinEnter * set iskeyword-=.
+autocmd VimEnter,BufWinEnter * set iskeyword-=#
+autocmd VimEnter,BufWinEnter * set iskeyword+=_
+
+set clipboard&                      " Reset option to its default value.
+
+set autowrite                       " auto save before commands like :next and :make
+set autoread                        " auto read file that has been changed on disk
 
 colorscheme ir_black
 "colorscheme molokai
@@ -28,6 +26,9 @@ colorscheme ir_black
 "colorscheme ron
 
 UnBundle 'amirh/HTML-AutoCloseTag'
+" remove coloresque because it is causing problems with iskeyword 
+" (periods are not separating keywords)
+"UnBundle 'gorodinskiy/vim-coloresque'
 
 " python-syntax
 let OPTION_NAME = 1
