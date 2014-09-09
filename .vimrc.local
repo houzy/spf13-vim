@@ -30,6 +30,9 @@ UnBundle 'amirh/HTML-AutoCloseTag'
 " (periods are not separating keywords)
 "UnBundle 'gorodinskiy/vim-coloresque'
 
+" Haskellmode-vim
+let g:haddock_browser="/usr/bin/firefox"
+
 " python-syntax
 let OPTION_NAME = 1
 let python_highlight_all = 1
