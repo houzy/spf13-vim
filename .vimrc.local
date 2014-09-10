@@ -37,6 +37,15 @@ UnBundle 'amirh/HTML-AutoCloseTag'
 " (periods are not separating keywords)
 "UnBundle 'gorodinskiy/vim-coloresque'
 
+" vim orgmode: VimOrganizer
+au! BufRead,BufWrite,BufWritePost,BufNewFile *.org 
+au BufEnter *.org call org#SetOrgFileType()
+
+" NrrwRgn
+" open the narrowed window as a vertical split buffer
+let g:nrrw_rgn_vert = 0
+let g:nrrw_rgn_incr = 30
+
 " in Vim files (including .vimrc), you may not want pairing of "
 " because it is the comment character. If you set a value for
 " g:autoclose_vim_commentmode, the " character will not be paired

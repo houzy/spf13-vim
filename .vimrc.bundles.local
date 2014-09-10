@@ -3,6 +3,17 @@ Bundle 'hdima/python-syntax'
 "Bundle 'Yggdroot/indentLine'
 Bundle 'luochen1990/rainbow'
 Bundle 'mattn/emmet-vim'
-Bundle 'jceb/vim-orgmode'
 Bundle 'vim-scripts/VisIncr'
-Plugin 'myusuf3/numbers.vim'
+Bundle 'myusuf3/numbers.vim'
+
+" like NrrwRgn
+Bundle 'AndrewRadev/inline_edit.vim'
+
+" an excellent calendar app, has the same command with calendar-vim
+"Bundle 'itchyny/calendar.vim'
+
+" orgmode
+Bundle 'hsitz/VimOrganizer'
+Bundle 'mattn/calendar-vim'
+Bundle 'chrisbra/NrrwRgn'
+Bundle 'vim-scripts/utl.vim'
