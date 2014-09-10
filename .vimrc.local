@@ -109,6 +109,9 @@ let g:ycm_collect_identifiers_from_comments_and_strings = 0
 " rainbow
 let g:rainbow_active = 1 "0 if you want to enable it later via :RainbowToggle
 
+" numbers
+nnoremap <F3> :NumbersToggle<CR>
+
 " VIM 7.3+ has support for highlighting a specified column.
 if exists('+colorcolumn')
     set colorcolumn=80
