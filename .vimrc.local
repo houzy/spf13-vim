@@ -46,6 +46,9 @@ au BufEnter *.org call org#SetOrgFileType()
 let g:nrrw_rgn_vert = 0
 let g:nrrw_rgn_incr = 30
 
+" pangloss/vim-javascript
+au FileType html,javascript let g:javascript_enable_domhtmlcss = 1
+
 " in Vim files (including .vimrc), you may not want pairing of "
 " because it is the comment character. If you set a value for
 " g:autoclose_vim_commentmode, the " character will not be paired
