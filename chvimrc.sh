@@ -94,6 +94,8 @@ function clean_symlinks() {
     rm -f "$HOME/.vimrc.bundles.fork"
     rm -f "$HOME/.vimrc.before.fork"
 
+    rm -f "$HOME/.gvimrc.local"
+
     ret="$?"
     success "$1"
     debug
