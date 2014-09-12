@@ -118,6 +118,18 @@ let g:ycm_complete_in_strings = 1
 "注释和字符串中的文字也会被收入补全
 let g:ycm_collect_identifiers_from_comments_and_strings = 0
 
+"let g:ycm_use_ultisnips_completer = 0
+" make YCM compatible with UltiSnips (using supertab)
+let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
+let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
+let g:SuperTabDefaultCompletionType = '<C-n>'
+
+" change complete trigger from <c-j> to <tab>
+" better key bindings for UltiSnipsExpandTrigger
+let g:UltiSnipsExpandTrigger = "<tab>"
+let g:UltiSnipsJumpForwardTrigger = "<tab>"
+let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
+
 " rainbow
 let g:rainbow_active = 1 "0 if you want to enable it later via :RainbowToggle
 
