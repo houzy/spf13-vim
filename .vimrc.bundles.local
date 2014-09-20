@@ -12,6 +12,8 @@ Bundle 'AndrewRadev/inline_edit.vim'
 " an excellent calendar app, has the same command with calendar-vim
 "Bundle 'itchyny/calendar.vim'
 
+Bundle 'houzy/jeffy-plugins'
+
 " orgmode
 Bundle 'hsitz/VimOrganizer'
 Bundle 'mattn/calendar-vim'

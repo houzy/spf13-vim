@@ -32,6 +32,21 @@ set autoread                        " auto read file that has been changed on di
 "colorscheme peaksea
 colorscheme ron
 
+set tags+=~/ctagsFile/systags
+
+" jeffy-plugins
+let g:jeffy_plugins_enable_colors = 0
+
+" cscope
+nmap <leader>ss :cs find s <C-R>=expand("<cword>")<cr><cr>
+nmap <leader>sg :cs find g <C-R>=expand("<cword>")<cr><cr>
+nmap <leader>sc :cs find c <C-R>=expand("<cword>")<cr><cr>
+nmap <leader>st :cs find t <C-R>=expand("<cword>")<cr><cr>
+nmap <leader>se :cs find e <C-R>=expand("<cword>")<cr><cr>
+nmap <leader>sf :cs find f <C-R>=expand("<cfile>")<cr><cr>
+nmap <leader>si :cs find i <C-R>=expand("<cfile>")<cr><cr>
+nmap <leader>sd :cs find d <C-R>=expand("<cword>")<cr><cr>
+
 UnBundle 'amirh/HTML-AutoCloseTag'
 " remove coloresque because it is causing problems with iskeyword 
 " (periods are not separating keywords)
