@@ -110,6 +110,10 @@ let g:syntastic_php_checkers = ['php', 'phpcs', 'phpmd']
 "let g:syntastic_cpp_compiler = 'clang++'
 "let g:syntastic_cpp_compiler_options = '-std=c++11 -stdlib=libstdc++'
 
+" goto next or previous error
+nmap <leader>jj :lnext<cr>
+nmap <leader>jk :lprev<cr>
+
 " YouCompleteMe
 "let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
 "let g:ycm_collect_identifiers_from_tags_files = 1
