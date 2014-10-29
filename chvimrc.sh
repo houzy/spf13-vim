@@ -120,6 +120,6 @@ case $1 in
         create_symlinks
         ;;
     *)
-        echo 'input: vimrc, vimrcVundle or vimrcVundle'
+        echo 'input: vimrc, vimrcVundle or vimrcspf13'
         ;;
 esac
