@@ -90,17 +90,30 @@ let g:snip_mail    = "h-zy2008@hotmail.com"
 let g:snip_company = ""
 
 " syntastic
-"let g:syntastic_check_on_open = 1
+" Toggles syntastic between active and passive mode.
+nmap <silent> <Leader>js :SyntasticToggleMode<CR>
+let g:syntastic_check_on_open = 0
 let g:syntastic_error_symbol = "✗"
 let g:syntastic_warning_symbol = "⚠"
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_loc_list_height = 4
+let g:syntastic_auto_jump = 2
 let g:syntastic_aggregate_errors = 1
 let g:syntastic_enable_balloons = 1
 let g:syntastic_mode_map = { 'passive_filetypes': ['scss', 'slim'] }
 let g:syntastic_python_checkers = ['pyflakes', 'pylint']
 let g:syntastic_php_checkers = ['php', 'phpcs', 'phpmd']
+" Turn off some stupid pylint checks for syntastic + Python
+" -E: Just show errors
+" -d: disable
+" pylint --list-msgs: show all codes
+let g:syntastic_python_pylint_args="-E"
+" or
+let g:syntastic_python_pylint_args="-d C0103,C0111,C0301,C0326"
+" the following two lines setting will silence all warnings, except for the ones produced by "pylint"
+"let g:syntastic_quiet_messages = { "level": "warnings" }
+"let g:syntastic_python_pylint_quiet_messages = { "level" : [] }
 "set statusline+=%{SyntasticStatuslineFlag()}
 "let g:syntastic_stl_format = '[%E{Err: %fe #%e}%B{, }%W{Warn: %fw #%w}]'
 "let g:syntastic_enable_highlighting = 0
@@ -115,7 +128,7 @@ nmap <leader>jj :lnext<cr>
 nmap <leader>jk :lprev<cr>
 
 " YouCompleteMe
-"let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
+let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
 "let g:ycm_collect_identifiers_from_tags_files = 1
 let g:ycm_seed_identifiers_with_syntax = 1
 let g:ycm_confirm_extra_conf = 0
@@ -124,7 +137,7 @@ let g:ycm_show_diagnostics_ui = 0
 "let g:ycm_error_symbol = "✗"
 "let g:ycm_warning_symbol = "⚠"
 let g:ycm_always_populate_location_list = 1
-let g:ycm_add_preview_to_completeopt = 1
+let g:ycm_add_preview_to_completeopt = 0
 let g:ycm_key_detailed_diagnostics = '<leader>d'
 nnoremap <leader>jd :YcmCompleter GoTo<CR>  " ctrl+o jumpback ctrl+i jumpforward
 nnoremap <leader>jf :YcmForceCompileAndDiagnostics<CR>
@@ -136,6 +149,7 @@ let g:ycm_complete_in_comments = 1
 let g:ycm_complete_in_strings = 1
 "注释和字符串中的文字也会被收入补全
 let g:ycm_collect_identifiers_from_comments_and_strings = 0
+let g:ycm_key_invoke_completion = '<S-Space>'
 
 "let g:ycm_use_ultisnips_completer = 0
 " make YCM compatible with UltiSnips (using supertab)
